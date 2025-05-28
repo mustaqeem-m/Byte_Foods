@@ -50,8 +50,82 @@
   width: 100%;
 }
 
-.js-top-rest-btn{
+/* .js-top-rest-btn,.search-btn {
   padding: 10px;
-  margin: 10px;
+  margin: 1px;
   cursor: pointer;
+} */
+
+.shimmer-card {
+  width: 200px;
+  height: 250px;
+  border-radius: 10px;
+  background: #f6f7f8;
+  background-image: linear-gradient(
+    to right,
+    #f6f7f8 0%,
+    #edeef1 20%,
+    #f6f7f8 40%,
+    #f6f7f8 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 800px 100%;
+  animation: shimmer 1.2s linear infinite;
+  margin: 16px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
 }
+
+@keyframes shimmer {
+  0% {
+    background-position: -800px 0;
+  }
+  100% {
+    background-position: 800px 0;
+  }
+}
+
+.login-btn{
+  cursor: pointer;
+  padding: 15px;
+  margin: 10px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.function-bar {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 30px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+}
+.search-group {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.search-btn,
+.js-top-rest-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search-btn:hover,
+.js-top-rest-btn:hover {
+  background-color: #45a049;
+}
+
+.js-top-rest-btn {
+  margin-top: 15px;
+  width: 100%;
+}
+
+
