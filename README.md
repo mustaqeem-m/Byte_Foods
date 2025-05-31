@@ -57,4 +57,24 @@ App
                          → Ideal for exporting MULTIPLE values
 
 ✨  Result               → Cleaner imports, modular codebase, scalable structure
+
+
+## 🧭 Routing Types (CSR vs SSR)
+
+### ⚡ Client-Side Routing (CSR)
+- Navigation handled by JavaScript (no full page reload).
+- Fast transitions, dynamic updates.
+- SEO requires extra setup.
+- Common in React (using `react-router-dom` + `<Outlet />`).
+
+### 🌐 Server-Side Routing (SSR)
+- Every route triggers full page reload.
+- Slower but SEO-friendly by default.
 ```
+
+### Restaurant Menu Part
+
+1. Fetch 🐢 Swiggy API
+2. Understand 🧠 data structure (cards → groupedCard → REGULAR → itemCards)
+3. Safely extract 🍽️ all dishes using map + flat
+4. Render 🖥️ each menu item with name + ₹price

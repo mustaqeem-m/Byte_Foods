@@ -1,15 +1,45 @@
 .header {
   display: flex;
   justify-content: space-between;
-  border: solid 3px rgb(168, 109, 220);
-  border-radius: 10px;
+  border: solid 2px #c084fc;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: #ffffff;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  border-radius: 12px;
 }
+
+
 .logo {
   width: 150px;
+  margin: 15px;
+}
+
+.header a{
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  position: relative;
 }
 
 .nav-items {
   font-size: 20px;
+  display: flex;
+  gap: 2rem;
+}
+
+.header a::after{
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #65a30d;
+  transition: width 0.3s;
+}
+.header a:hover::after{
+  width: 100%;
 }
 .nav-items > ul {
   display: flex;
@@ -19,6 +49,7 @@
   padding: 10px;
   margin: 10px;
   list-style-type: none;
+  cursor: pointer;
 }
 
 .res-container {
@@ -86,10 +117,14 @@
 
 .login-btn{
   cursor: pointer;
-  padding: 15px;
+  padding: 0.6rem 1.2rem;
   margin: 10px;
   font-weight: bold;
   font-size: 15px;
+  background: #65a30d;
+  color: white;
+  border:none;
+  border-radius: 8px ;
 }
 
 .function-bar {
@@ -127,5 +162,12 @@
   margin-top: 15px;
   width: 100%;
 }
+
+.res-container a{
+  text-decoration: none;
+  color: inherit;
+}
+
+
 
 
