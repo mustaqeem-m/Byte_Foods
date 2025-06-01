@@ -6,3 +6,6 @@ export const SRC_URL =
 
 export const MENU_API =
   "https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=13.0485682&lng=80.22062869999999&restaurantId=";
+
+  export const HOME_CARDS_URL =
+    "https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.0485682&lng=80.22062869999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";

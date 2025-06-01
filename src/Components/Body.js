@@ -2,46 +2,34 @@ import { RestaurantCard } from "./RestaurantCard.js";
 import { useEffect, useState } from "react";
 import ShimmerCard from "../utils/Shimmer.js";
 import { Link } from "react-router-dom";
+import useRestaurantList from "../utils/useRestaurantList.js";
+import useStatus from "../utils/useStatus.js";
+
+
 export const Body = () => {
-  const [resListState, setResListState] = useState([]);
+  const [resListState, setResListState] = useRestaurantList();
   const [search_val, setSearch_val] = useState("");
+  const Status = useStatus();
 
   const getFilteredList = () => {
+    if (!Array.isArray(resListState)) return [];
+
     if (search_val.trim()) {
       return resListState.filter((res) =>
         res.info.name.toLowerCase().includes(search_val.toLowerCase())
       );
     }
+
     return resListState;
   };
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const data = await fetch(
-          "https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.0485682&lng=80.22062869999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-        );
+  if (Status === false) {
+    return (
+      <h1>Sorry !!! , Pls check your internet connection</h1>
+    )
+  }
 
-        const json_data = await data.json();
-
-        const restaurantCard = json_data?.data?.cards?.find(
-          (card) => card?.card?.card?.gridElements?.infoWithStyle?.restaurants
-        );
-
-        const restaurantList =
-          restaurantCard?.card?.card?.gridElements?.infoWithStyle?.restaurants;
-
-        setResListState(restaurantList || []);
-      } catch (error) {
-        console.error("Fetch Failed: ", error);
-        setResListState([]);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  if (resListState.length === 0) {
+  if (!resListState || resListState.length === 0) {
     return (
       <div className="res-container">
         {Array(8)

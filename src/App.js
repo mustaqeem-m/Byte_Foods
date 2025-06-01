@@ -1,14 +1,23 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import Body from "./Components/Body";
 import { Header } from "./Components/Header.js";
 import { RestaurantCard } from "./Components/RestaurantCard.js";
-import About from "./Components/About.js";
+// import About from "./Components/About.js";
 import Contact from "./Components/Contact.js";
 import Error from "./Components/Error.js";
 import RestaurantMenu from "./Components/RestaurantMenu.js";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import "../index.css";
+// import Grocery from "./Components/Grocery.js";
+
+const Grocery = lazy(() => {
+  return import("./Components/Grocery.js");
+});
+
+const About = lazy(() => {
+  return import("./Components/About.js");
+});
 
 const AppLayout = () => {
   return (
@@ -32,7 +41,11 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/About",
-        element: <About />,
+        element: (
+          <Suspense fallback={<h1>Hold on , You are almost there</h1>}>
+            <About />
+          </Suspense>
+        ),
       },
       {
         path: "/Contact",
@@ -41,7 +54,15 @@ const appRouter = createBrowserRouter([
       {
         path: "/restaurant/:resId",
         element: <RestaurantMenu />,
-      }
+      },
+      {
+        path: "/Grocery",
+        element: (
+          <Suspense fallback={<h1>Hold on , You are almost there</h1>}>
+            <Grocery />
+          </Suspense>
+        ),
+      },
     ],
     errorElement: <Error />,
   },
