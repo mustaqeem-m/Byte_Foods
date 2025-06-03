@@ -7,7 +7,7 @@ export const Header = () => {
   const [btn_text, setBtn_text] = useState("Login");
   const Status = useStatus();
   return (
-    <div className="header">
+    <div className="flex">
       <div className="logo-container">
         <img className="logo" src={SRC_URL} />
       </div>

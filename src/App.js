@@ -3,13 +3,10 @@ import ReactDOM from "react-dom/client";
 import Body from "./Components/Body";
 import { Header } from "./Components/Header.js";
 import { RestaurantCard } from "./Components/RestaurantCard.js";
-// import About from "./Components/About.js";
 import Contact from "./Components/Contact.js";
 import Error from "./Components/Error.js";
 import RestaurantMenu from "./Components/RestaurantMenu.js";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import "../index.css";
-// import Grocery from "./Components/Grocery.js";
 
 const Grocery = lazy(() => {
   return import("./Components/Grocery.js");
