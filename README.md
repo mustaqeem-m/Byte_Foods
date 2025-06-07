@@ -78,3 +78,7 @@ App
 2. Understand 🧠 data structure (cards → groupedCard → REGULAR → itemCards)
 3. Safely extract 🍽️ all dishes using map + flat
 4. Render 🖥️ each menu item with name + ₹price
+
+
+## Restaurant Menu
+1. implemented an accordion in React using controlled components, managing open/close state in the parent and passing toggle handlers as props to ensure only one section expands at a time

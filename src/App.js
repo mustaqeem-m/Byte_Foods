@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useState, useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import Body from "./Components/Body";
 import { Header } from "./Components/Header.js";
@@ -7,6 +7,7 @@ import Contact from "./Components/Contact.js";
 import Error from "./Components/Error.js";
 import RestaurantMenu from "./Components/RestaurantMenu.js";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import UserContext from "./utils/UserContext.js";
 
 const Grocery = lazy(() => {
   return import("./Components/Grocery.js");
@@ -17,13 +18,27 @@ const About = lazy(() => {
 });
 
 const AppLayout = () => {
+  const [userName, setUserName] = useState();
+  useEffect(() => {
+    //make a API call
+
+    const data = {
+      userName: "mustaqeem-m",
+      userId: 7272727,
+      DOB: "19-oct-2002",
+    };
+    setUserName(data.userName);
+  }, []);
+
   return (
-    <div className="app-container">
-      <Header /> {/* //? remain Intact */}
-      <Outlet />
-      {/*//? it changes based on route changes, it ll get replaced with 
+    <UserContext.Provider value={{ defaultName: userName }}>
+      <div className="app-container">
+        <Header /> {/* //? remain Intact */}
+        <Outlet />
+        {/*//? it changes based on route changes, it ll get replaced with 
       //?the corresponding Component according to the path*/}
-    </div>
+      </div>
+    </UserContext.Provider>
   );
 };
 
