@@ -3,11 +3,15 @@ import { SRC_URL } from "../utils/constants.js";
 import { useContext, useState } from "react";
 import useStatus from "../utils/useStatus.js";
 import UserContext from "../utils/UserContext.js";
+import { useSelector } from "react-redux";
 
 export const Header = () => {
   const [btn_text, setBtn_text] = useState("Login");
   const Status = useStatus();
   const userInfo = useContext(UserContext);
+  //! Using selector we 're here SUBSCRIBED (synced) with our store
+  const cartItems = useSelector((store) => store.cart.items);
+  console.log(cartItems);
 
   return (
     <div className="flex justify-between border-2 rounded-3xl border-cyan-400 p-4 mt-1">
@@ -32,6 +36,9 @@ export const Header = () => {
           </li>
           <li className="px-4">
             <Link to="/Grocery">Grocery</Link>
+          </li>
+          <li className="px-4">
+            <Link to="/Cart">Cart ({(cartItems.length)}-Items)</Link>
           </li>
           <li className="px-4">
             <button

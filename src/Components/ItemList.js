@@ -1,12 +1,24 @@
 import { SWIGGY_CDN_BASE } from "../utils/constants";
+import { useDispatch } from "react-redux";
+import { addItem } from "../utils/Slices/CartSlice";
 
 export const ItemList = ({ items }) => {
-  console.log(items)
+  const dispatch = useDispatch()
+  const handleAddItem = (item) => {
+    dispatch(addItem(item));
+  };
   return (
     <div>
       {items.map((item, index) => {
-        const { name, id, price, description, imageId,defaultPrice,vegClassifier } =
-          item?.card?.info || {};
+        const {
+          name,
+          id,
+          price,
+          description,
+          imageId,
+          defaultPrice,
+          vegClassifier,
+        } = item?.card?.info || {};
 
         return (
           <div
@@ -38,7 +50,10 @@ export const ItemList = ({ items }) => {
                   className="w-28 h-24 rounded-md object-cover shadow"
                 />
 
-                <button className="absolute bottom-0 left-1/2 transform -translate-x-0.5 translate-y-0.5 bg-white text-green-600 font-bold text-sm px-3 py-1 rounded shadow-md cursor-pointer hover:bg-green-100 hover:sacle-110 transition-all duration-300">
+                <button
+                  className="absolute bottom-0 left-1/2 transform -translate-x-0.5 translate-y-0.5 bg-white text-green-600 font-bold text-sm px-3 py-1 rounded shadow-md cursor-pointer hover:bg-green-100 hover:sacle-110 transition-all duration-300"
+                  onClick={() => handleAddItem(item)}
+                >
                   ADD
                 </button>
               </div>

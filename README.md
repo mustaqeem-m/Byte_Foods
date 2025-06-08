@@ -79,6 +79,24 @@ App
 3. Safely extract 🍽️ all dishes using map + flat
 4. Render 🖥️ each menu item with name + ₹price
 
-
 ## Restaurant Menu
+
 1. implemented an accordion in React using controlled components, managing open/close state in the parent and passing toggle handlers as props to ensure only one section expands at a time
+
+## 🧰 Redux Toolkit
+
+- Install `@reduxjs/toolkit` and `react-redux`
+- Build our store
+- Connect our store to our app
+- Slice (`cartSlice`)
+- dispatch(action)
+- selector
+
+# flow
+
+- You click "ADD" button →
+- handleAddItem runs →
+- dispatch(addItem("Half-grill")) →
+- Redux sees type "cart/addItem" →
+- Runs addItem reducer →
+- "Half-grill" gets added to the cart

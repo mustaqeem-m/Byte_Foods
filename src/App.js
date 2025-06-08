@@ -8,6 +8,9 @@ import Error from "./Components/Error.js";
 import RestaurantMenu from "./Components/RestaurantMenu.js";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import UserContext from "./utils/UserContext.js";
+import { Provider } from "react-redux";
+import appStore from "./utils/AppStore.js";
+import Cart from "./Components/Cart.js";
 
 const Grocery = lazy(() => {
   return import("./Components/Grocery.js");
@@ -31,14 +34,16 @@ const AppLayout = () => {
   }, []);
 
   return (
-    <UserContext.Provider value={{ defaultName: userName }}>
-      <div className="app-container">
-        <Header /> {/* //? remain Intact */}
-        <Outlet />
-        {/*//? it changes based on route changes, it ll get replaced with 
+    <Provider store={appStore}>
+      <UserContext.Provider value={{ defaultName: userName }}>
+        <div className="app-container">
+          <Header /> {/* //? remain Intact */}
+          <Outlet />
+          {/*//? it changes based on route changes, it ll get replaced with 
       //?the corresponding Component according to the path*/}
-      </div>
-    </UserContext.Provider>
+        </div>
+      </UserContext.Provider>
+    </Provider>
   );
 };
 
@@ -72,6 +77,14 @@ const appRouter = createBrowserRouter([
         element: (
           <Suspense fallback={<h1>Hold on , You are almost there</h1>}>
             <Grocery />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/Cart",
+        element: (
+          <Suspense fallback={<h1>Hod On!!</h1>}>
+            <Cart />
           </Suspense>
         ),
       },
