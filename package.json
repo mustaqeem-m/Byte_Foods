@@ -6,6 +6,7 @@
     "start": "parcel index.html",
     "build": "parcel build index.html",
     "test": "jest",
+    "test-watch": "jest --watch",
     "tailwind:init": "tailwindcss init"
   },
   "repository": {
@@ -20,6 +21,14 @@
   },
   "homepage": "https://github.com/mustaqeem-m/React#readme",
   "devDependencies": {
+    "@babel/core": "^7.27.4",
+    "@babel/preset-env": "^7.27.2",
+    "@babel/preset-react": "^7.27.1",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "babel-jest": "^30.0.0",
+    "jest": "^30.0.0",
+    "jest-environment-jsdom": "^30.0.0",
     "parcel": "^2.15.1"
   },
   "dependencies": {

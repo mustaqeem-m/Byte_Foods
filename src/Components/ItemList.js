@@ -22,6 +22,7 @@ export const ItemList = ({ items }) => {
 
         return (
           <div
+            data-testid="foodItems"
             key={id || index}
             className="p-4 mb-4 rounded-xl g-white/40 backdrop-blur-md shadow-lg flex justify-between items-start gap-4 transition duration-300 hover:shadow-2xl hover:scale-[1.01]"
           >

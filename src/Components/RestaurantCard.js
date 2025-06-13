@@ -11,7 +11,7 @@ export const RestaurantCard = ({ resData }) => {
   } = resData.info;
 
   return (
-    <div className="res-card rounded-2xl">
+    <div data-testid="resCard" className="res-card rounded-2xl">
       <img
         className="res-logo rounded-2xl"
         src={SWIGGY_CDN_BASE + cloudinaryImageId}
@@ -29,8 +29,10 @@ export const RestaurantCard = ({ resData }) => {
 export const WithPromotedLabel = (RestaurantCard) => {
   return (props) => {
     return (
-      <div className="relative">
-        <label className="absolute top-2 left-2 bg-gradient-to-r from-pink-500 to-yellow-500 text-white text-xs px-3 py-1 font-semibold rounded-full shadow-md backdrop-blur-sm hover:scale-105 transition-transform duration-200">Promoted</label>
+      <div data-testid="PromotedCard" className="relative">
+        <label className="absolute top-2 left-2 bg-gradient-to-r from-pink-500 to-yellow-500 text-white text-xs px-3 py-1 font-semibold rounded-full shadow-md backdrop-blur-sm hover:scale-105 transition-transform duration-200">
+          Promoted
+        </label>
         <RestaurantCard {...props} />
       </div>
     );

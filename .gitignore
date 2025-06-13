@@ -1,9 +1,10 @@
 /node_modules
 /dist
 .parcel-cache
-React-Practice
+/coverage
 
 # Some files like node_modules, dist, and cache are already handled on the server side.
 # So we only push the necessary files (like source code and config) into the Git repo.
 # The server will install the required dependencies based on package.json and package-lock.json,
 # and recreate modules, build files, and caches by syncing with them.
+# coverage represent test code coverages

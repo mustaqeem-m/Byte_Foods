@@ -100,3 +100,26 @@ App
 - Redux sees type "cart/addItem" →
 - Runs addItem reducer →
 - "Half-grill" gets added to the cart
+
+# Types of Testing (Dev)
+
+- Unit testing
+- Integrating testing
+- End to End testing
+
+# Setting up testing in our app
+
+- Install react testing library
+- Installed jest
+- Installed Babel dependencies
+- Configure Babel - babel.donfig.js
+- Configure parcel config file to disable default babel transpilation
+- Config jest | npx create-jest
+- install jsdom-library
+- Install @babel/preset-react - to support jsx work in test cases
+- install @babel/preset-react inside our babel config
+- Install @testing-library/jest-dom
+
+# Essential React testing stack
+
+npm i -D @testing-library/react @testing-library/jest-dom @testing-library/user-event

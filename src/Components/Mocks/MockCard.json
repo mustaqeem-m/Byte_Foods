@@ -1,0 +1,80 @@
+{
+  "info": {
+    "id": "32930",
+    "name": "KFC",
+    "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/12/9/4d354103-ae36-4494-b144-e875ee012d15_32930.JPG",
+    "locality": "Vadapalani",
+    "areaName": "Vadapalani",
+    "costForTwo": "₹400 for two",
+    "cuisines": ["Burgers", "Fast Food", "Rolls & Wraps"],
+    "avgRating": 4.3,
+    "parentId": "547",
+    "avgRatingString": "4.3",
+    "totalRatingsString": "15K+",
+    "sla": {
+      "deliveryTime": 53,
+      "lastMileTravel": 1.7,
+      "serviceability": "SERVICEABLE",
+      "slaString": "50-60 mins",
+      "lastMileTravelString": "1.7 km",
+      "iconType": "ICON_TYPE_EMPTY"
+    },
+    "availability": {
+      "nextCloseTime": "2025-06-10 23:00:00",
+      "opened": true
+    },
+    "badges": {
+      "imageBadges": [
+        {
+          "imageId": "Rxawards/_CATEGORY-Burger.png",
+          "description": "Delivery!"
+        }
+      ]
+    },
+    "isOpen": true,
+    "type": "F",
+    "badgesV2": {
+      "entityBadges": {
+        "imageBased": {
+          "badgeObject": [
+            {
+              "attributes": {
+                "description": "Delivery!",
+                "imageId": "Rxawards/_CATEGORY-Burger.png"
+              }
+            }
+          ]
+        },
+        "textBased": {},
+        "textExtendedBadges": {}
+      }
+    },
+    "aggregatedDiscountInfoV3": {
+      "header": "ITEMS",
+      "subHeader": "AT ₹59"
+    },
+    "differentiatedUi": {
+      "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+      "differentiatedUiMediaDetails": {
+        "lottie": {},
+        "video": {}
+      }
+    },
+    "reviewsSummary": {},
+    "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+    "restaurantOfferPresentationInfo": {},
+    "externalRatings": {
+      "aggregatedRating": {
+        "rating": "--"
+      }
+    },
+    "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+  },
+  "analytics": {
+    "context": "seo-data-e564f1de-ee97-4a54-b449-2ba22e8f367f"
+  },
+  "cta": {
+    "link": "https://www.swiggy.com/city/chennai/kfc-vadapalani-rest32930",
+    "type": "WEBLINK"
+  }
+}

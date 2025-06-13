@@ -26,7 +26,7 @@ export const Body = () => {
   if (Status === false) {
     return <h1>Sorry !!! , Pls check your internet connection</h1>;
   }
-  console.log(resListState);
+  // console.log(resListState);
 
   if (!resListState || resListState.length === 0) {
     return (
@@ -46,6 +46,7 @@ export const Body = () => {
         <div className="search-group m-2 flex gap-8">
           <input
             type="text"
+            data-testid="searchBar"
             className="search-bar border-1 rounded-md w-75"
             placeholder="Enter Key Word to search:"
             value={search_val}
@@ -65,7 +66,7 @@ export const Body = () => {
           className="js-top-rest-btn m-2 bg-sky-200 px-4 py-1 rounded-md"
           onClick={() => {
             const filtered = resListState.filter(
-              (res) => res.info.avgRating >= 4.0
+              (res) => res.info.avgRating >= 4.5
             );
             setResListState(filtered); 
           }}
