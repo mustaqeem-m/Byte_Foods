@@ -1,3 +1,0 @@
-now it doesnt show me any error instead of that its hows a blank white screen 
-for eg if iu click a card https://byte-foods-t8vn.vercel.app/restaurant/862795
-it shows me white screen idk y
