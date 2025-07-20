@@ -14,8 +14,7 @@ const useRestaurantList = () => {
           (card) => card?.card?.card?.gridElements?.infoWithStyle?.restaurants
         );
 
-        const restaurantList =
-          restaurantCard?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+        const restaurantList = restaurantCard?.card?.card?.gridElements?.infoWithStyle?.restaurants;
 
         setResListState(Array.isArray(restaurantList) ? restaurantList : []);
       } catch (err) {
