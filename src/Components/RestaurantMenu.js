@@ -13,16 +13,28 @@ const RestaurantMenu = () => {
   if (resInfo === null) {
     return <ShimmerCard />;
   }
-  const info = resInfo?.data?.cards[2]?.card?.card?.info;
 
+  // Find the restaurant info card dynamically.
+  const infoCard = resInfo?.cards?.find(
+    (c) => c?.card?.card?.info
+  );
+  const info = infoCard?.card?.card?.info;
+
+  // Find the menu items card dynamically.
+  const groupedCard = resInfo?.cards?.find((c) => c.groupedCard);
   const regularCards =
-    resInfo?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
+    groupedCard?.groupedCard?.cardGroupMap?.REGULAR?.cards;
+
 
   const categories = regularCards?.filter(
     (c) =>
       c.card?.card?.["@type"] ===
       "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
   );
+
+  if (!info) {
+    return <ShimmerCard />;
+  }
 
   return (
     <div className="menu">

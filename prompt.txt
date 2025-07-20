@@ -1,0 +1,12 @@
+TypeError: Cannot read properties of undefined (reading 'name')
+    at RestaurantMenu.js:30:55
+Error.js:5 TypeError: Cannot read properties of undefined (reading 'name')
+    at RestaurantMenu.js:30:55
+react-dom-client.production.js:5788 
+ TypeError: Cannot read properties of undefined (reading 'name')
+    at RestaurantMenu.js:30:55
+hooks.tsx:631 
+ React Router caught the following error during render TypeError: Cannot read properties of undefined (reading 'name')
+    at RestaurantMenu.js:30:55
+ 
+{componentStack: '\n    at https://byte-foods-rzo2.vercel.app/path0.8…foods-rzo2.vercel.app/path0.8e848261.js:1:281690)'}
