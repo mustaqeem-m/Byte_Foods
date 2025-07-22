@@ -16,7 +16,7 @@ describe("Contact us page Test suite", () => {
     render(<Contact />);
     // step-2 Querying
     const btn = screen.getByRole("button");
-    console.log(btn);
+    // console.log(btn);
     // step-3 : Checking
     expect(btn).toBeInTheDocument();
   });
@@ -25,7 +25,7 @@ describe("Contact us page Test suite", () => {
     render(<Contact />);
 
     const inpBoxes = screen.getAllByRole("textbox");
-    console.log(inpBoxes.length);
+    // console.log(inpBoxes.length);
 
     expect(inpBoxes.length).toBe(2);
   });

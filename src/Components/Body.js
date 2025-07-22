@@ -55,7 +55,7 @@ export const Body = () => {
           <button
             className="search-btn bg-sky-200 px-4 py-1 rounded-md"
             onClick={() => {
-              console.log("Search initiated");
+              // console.log("Search initiated");
             }}
           >
             Search
@@ -68,7 +68,7 @@ export const Body = () => {
             const filtered = resListState.filter(
               (res) => res.info.avgRating >= 4.5
             );
-            setResListState(filtered); 
+            setResListState(filtered);
           }}
         >
           Top rated restaurents!

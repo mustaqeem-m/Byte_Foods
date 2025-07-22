@@ -4,5 +4,6 @@
       "source": "/api/:path*",
       "destination": "https://www.swiggy.com/dapi/:path*"
     }
-  ]
+  ],
+  "devCommand": "npm start"
 }
